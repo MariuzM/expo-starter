@@ -1,0 +1,50 @@
+{
+  "name": "expo-starter",
+  "version": "1.0.0",
+  "main": "src/App.tsx",
+  "scripts": {
+    "d": "expo start --ios",
+    "dd": "expo run:ios",
+    "dev": "expo start --ios",
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bun run d -c",
+    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install && bun dd",
+    "pub": "bunx eas-cli update"
+  },
+  "dependencies": {
+    "@gorhom/bottom-sheet": "^4",
+    "@react-navigation/bottom-tabs": "^6.5.10",
+    "@react-navigation/drawer": "^6.6.5",
+    "@react-navigation/native": "^6.1.9",
+    "axios": "^1.5.1",
+    "expo": "~49.0.16",
+    "expo-blur": "~12.4.1",
+    "expo-build-properties": "~0.8.3",
+    "expo-splash-screen": "~0.20.5",
+    "expo-status-bar": "~1.6.0",
+    "expo-updates": "~0.18.16",
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-gesture-handler": "~2.12.0",
+    "react-native-maps": "1.7.1",
+    "react-native-reanimated": "~3.3.0",
+    "react-native-safe-area-context": "4.6.3",
+    "react-native-screens": "~3.22.0",
+    "react-native-svg": "13.9.0",
+    "react-native-worklets-core": "^0.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@types/react": "~18.2.31",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "8.52.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.2.2"
+  },
+  "private": true
+}
