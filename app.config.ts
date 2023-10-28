@@ -3,7 +3,7 @@ import type { ExpoConfig } from 'expo/config';
 const BUNDLE_IDENTIFIER = 'com.mariusdotdev.expostarterapp';
 const VERSION = '1.0.0';
 const BUILD_NUMBER = '1';
-const BACKGROUND_COLOR = '#2C2D49';
+const BACKGROUND_COLOR = '#fb00ff';
 
 export default (): ExpoConfig => {
   return {
@@ -15,9 +15,12 @@ export default (): ExpoConfig => {
 
     userInterfaceStyle: 'light',
 
+    // backgroundColor: BACKGROUND_COLOR,
+    // primaryColor: 'green',
+
     splash: {
-      image: './assets/splash.png',
-      resizeMode: 'contain',
+      // image: './assets/splash.png',
+      // resizeMode: 'cover',
       backgroundColor: BACKGROUND_COLOR,
     },
 

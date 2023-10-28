@@ -1,10 +1,7 @@
 import { registerRootComponent } from 'expo';
-import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
-
-SplashScreen.preventAutoHideAsync();
 
 // const TabNav = createBottomTabNavigator();
 
@@ -23,18 +20,12 @@ const App = () => {
     })();
   }, []);
 
-  const onLayoutRootView = useCallback(async () => {
-    if (appIsReady) {
-      await SplashScreen.hideAsync();
-    }
-  }, [appIsReady]);
-
   if (!appIsReady) {
     return (
       <View
         style={{
           alignItems: 'center',
-          backgroundColor: '#2D2E49',
+          backgroundColor: 'orange',
           flex: 1,
           justifyContent: 'center',
         }}
@@ -46,11 +37,11 @@ const App = () => {
 
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View
-        onLayout={onLayoutRootView}
         style={{
           alignItems: 'center',
+          backgroundColor: 'blue',
           flex: 1,
           justifyContent: 'center',
         }}
