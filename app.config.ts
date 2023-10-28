@@ -25,8 +25,7 @@ export default (): ExpoConfig => {
     },
 
     assetBundlePatterns: ['**/*'],
-
-    platforms: ['ios'],
+    platforms: ['ios', 'android'],
 
     ios: {
       bundleIdentifier: BUNDLE_IDENTIFIER,
