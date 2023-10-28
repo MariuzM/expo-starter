@@ -1,30 +1,26 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import { registerRootComponent } from 'expo';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
-const TabNav = createBottomTabNavigator();
-
 SplashScreen.preventAutoHideAsync();
+
+// const TabNav = createBottomTabNavigator();
 
 const App = () => {
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
-    async function prepare() {
+    (async () => {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (e) {
         console.warn(e);
       } finally {
         setAppIsReady(true);
       }
-    }
-
-    prepare();
+    })();
   }, []);
 
   const onLayoutRootView = useCallback(async () => {
@@ -34,47 +30,35 @@ const App = () => {
   }, [appIsReady]);
 
   if (!appIsReady) {
-    return <MySplashScreen />;
+    return (
+      <View
+        style={{
+          alignItems: 'center',
+          backgroundColor: '#2D2E49',
+          flex: 1,
+          justifyContent: 'center',
+        }}
+      >
+        <Text>Loading...</Text>
+      </View>
+    );
   }
 
   return (
-    <View
-      style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
-      onLayout={onLayoutRootView}
-    >
-      <Text>SplashScreen Demo! 👋</Text>
-    </View>
-    // <>
-    //   <StatusBar style="light" />
-    //   <NavigationContainer>
-    //     <TabNav.Navigator>
-    //       <TabNav.Screen name="Home" component={HomeScreen} />
-    //     </TabNav.Navigator>
-    //   </NavigationContainer>
-    // </>
+    <>
+      <StatusBar style="light" />
+      <View
+        onLayout={onLayoutRootView}
+        style={{
+          alignItems: 'center',
+          flex: 1,
+          justifyContent: 'center',
+        }}
+      >
+        <Text>Home Screen</Text>
+      </View>
+    </>
   );
 };
 
 registerRootComponent(App);
-
-const HomeScreen = () => {
-  return (
-    <View>
-      <Text>122</Text>
-      <Text>122</Text>
-      <Text>122</Text>
-      <Text>122</Text>
-      <Text>122</Text>
-    </View>
-  );
-};
-
-const MySplashScreen = () => {
-  return (
-    <View
-      style={{ alignItems: 'center', backgroundColor: 'red', flex: 1, justifyContent: 'center' }}
-    >
-      <Text>Splash Screen</Text>
-    </View>
-  );
-};
