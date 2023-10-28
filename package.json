@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "main": "src/App.tsx",
   "scripts": {
-    "d": "expo start --ios",
-    "dd": "expo run:ios",
+    "dg": "expo start --ios",
+    "d": "expo run:ios",
+    "preb": "expo prebuild",
+    "check": "bunx expo-doctor",
+    "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bun run d -c",
+    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install && bun dd",
+    "b:prev": "bunx expo prebuild && bunx pod-install && bunx eas build -p ios --profile preview --local",
+    "pub": "bunx eas-cli update",
+    "==============================================": "",
     "dev": "expo start --ios",
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web",
-    "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bun run d -c",
-    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install && bun dd",
-    "pub": "bunx eas-cli update"
+    "web": "expo start --web"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4",
