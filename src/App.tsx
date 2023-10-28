@@ -41,7 +41,7 @@ const App = () => {
       <View
         style={{
           alignItems: 'center',
-          backgroundColor: 'blue',
+          backgroundColor: '#556ad3',
           flex: 1,
           justifyContent: 'center',
         }}
