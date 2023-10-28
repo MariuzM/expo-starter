@@ -14,13 +14,13 @@
       "channel": "preview",
       "distribution": "internal"
     },
-    "production": {}
-  },
-
-  "submit": {
     "production": {
       "channel": "production",
       "distribution": "store"
     }
+  },
+
+  "submit": {
+    "production": {}
   }
 }
