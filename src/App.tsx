@@ -34,7 +34,7 @@ const App = () => {
   }, [appIsReady]);
 
   if (!appIsReady) {
-    return null;
+    return <MySplashScreen />;
   }
 
   return (
@@ -65,6 +65,16 @@ const HomeScreen = () => {
       <Text>122</Text>
       <Text>122</Text>
       <Text>122</Text>
+    </View>
+  );
+};
+
+const MySplashScreen = () => {
+  return (
+    <View
+      style={{ alignItems: 'center', backgroundColor: 'red', flex: 1, justifyContent: 'center' }}
+    >
+      <Text>Splash Screen</Text>
     </View>
   );
 };

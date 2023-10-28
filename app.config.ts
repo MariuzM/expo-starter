@@ -15,9 +15,6 @@ export default (): ExpoConfig => {
 
     userInterfaceStyle: 'light',
 
-    backgroundColor: BACKGROUND_COLOR,
-    primaryColor: BACKGROUND_COLOR,
-
     splash: {
       image: './assets/splash.png',
       resizeMode: 'contain',
