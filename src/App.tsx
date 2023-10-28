@@ -1,9 +1,11 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
-// const TabNav = createBottomTabNavigator();
+const TabNav = createBottomTabNavigator();
 
 const App = () => {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -11,7 +13,7 @@ const App = () => {
   useEffect(() => {
     (async () => {
       try {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        // await new Promise((resolve) => setTimeout(resolve, 2000));
       } catch (e) {
         console.warn(e);
       } finally {
@@ -38,18 +40,30 @@ const App = () => {
   return (
     <>
       <StatusBar style="dark" />
-      <View
-        style={{
-          alignItems: 'center',
-          backgroundColor: '#556ad3',
-          flex: 1,
-          justifyContent: 'center',
-        }}
-      >
-        <Text>Home Screen</Text>
-      </View>
+      <NavigationContainer>
+        <TabNav.Navigator>
+          <TabNav.Screen name="Home" component={HomeScreen} />
+          <TabNav.Screen name="Settings" component={SettingsScreen} />
+        </TabNav.Navigator>
+      </NavigationContainer>
     </>
   );
 };
 
 registerRootComponent(App);
+
+const HomeScreen = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+};
+
+const SettingsScreen = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+};
