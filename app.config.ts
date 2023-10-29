@@ -47,6 +47,22 @@ export default (): ExpoConfig => {
       favicon: './assets/favicon.png',
     },
 
+    plugins: [
+      [
+        'expo-build-properties',
+        {
+          ios: {
+            deploymentTarget: '15.0',
+          },
+          android: {
+            compileSdkVersion: 33,
+            targetSdkVersion: 33,
+            buildToolsVersion: '33.0.0',
+          },
+        },
+      ],
+    ],
+
     extra: {
       eas: {
         projectId: '3ef33f6d-ada0-4486-89a1-b1057dd54552',

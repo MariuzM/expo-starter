@@ -5,9 +5,11 @@
   "scripts": {
     "d": "expo run:ios",
     "preb": "expo prebuild",
+    "========== PREVIEW BUILDS ======================": "",
+    "b:ios:prev": "bunx expo prebuild && bunx pod-install && bunx eas build -p ios --profile preview --local",
     "========== FIX =================================": "",
     "check": "bunx expo-doctor",
-    "fix:dep": "bunx expo install --fix",
+    "fix:deps": "bunx expo install --fix",
     "========== CLEAN ===============================": "",
     "cl:gradle": "cd android && ./gradlew clean && cd ..",
     "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bunx expo prebuild && bunx pod-install",
@@ -39,8 +41,7 @@
     "react-native-reanimated": "~3.3.0",
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
-    "react-native-svg": "13.9.0",
-    "react-native-worklets-core": "^0.2.2"
+    "react-native-svg": "13.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
