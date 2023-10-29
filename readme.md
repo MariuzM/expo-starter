@@ -12,8 +12,14 @@
 - [Bun](https://bun.sh/)
 - [Node.js](https://nodejs.org/en/)
 - [Expo CLI](https://docs.expo.io/versions/latest/workflow/expo-cli/)
-- [Cocoapods](https://cocoapods.org/)
+
+For iOS:
+
 - [Xcode](https://developer.apple.com/xcode/)
+- [Cocoapods](https://cocoapods.org/)
+
+For Android:
+
 - [Android Studio](https://developer.android.com/studio)
 - [Java 17](https://www.azul.com/downloads)
 
@@ -30,6 +36,7 @@
 - Prettier and ESLint + auto import sorting and `type` alias adding
 - Move from `app.json` to `app.config.ts` with typescript support
 - Extra scripts in `package.json`
+- Fully working with [Bun](https://bun.sh/)
 - Other fixes
 
 ## 📦 How to use
