@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
-const TabNav = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -41,10 +41,10 @@ const App = () => {
     <>
       <StatusBar style="dark" />
       <NavigationContainer>
-        <TabNav.Navigator>
-          <TabNav.Screen name="Home" component={HomeScreen} />
-          <TabNav.Screen name="Settings" component={SettingsScreen} />
-        </TabNav.Navigator>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
       </NavigationContainer>
     </>
   );
