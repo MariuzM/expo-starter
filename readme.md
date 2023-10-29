@@ -27,6 +27,7 @@
 - Manual change for Android gradle files so does not break on build
 - Example navigation templates
 - Prettier and ESLint + auto import sorting and `type` alias adding
+- Move from `app.json` to `app.config.ts` with typescript support
 - Extra scripts in `package.json`
 - Other fixes
 
