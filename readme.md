@@ -4,7 +4,6 @@
 ## 🚀 Features included
 
 - Expo Router v2
-- Manual change for Android gradle files so does not break on build
 - Example navigation templates
 - Prettier and ESLint + auto import sorting and `type` alias adding
 - Move from `app.json` to `app.config.ts` with typescript support
@@ -38,6 +37,8 @@ For Android:
 
 - [Android Studio](https://developer.android.com/studio)
 - [Java 17](https://www.azul.com/downloads)
+- [Gradle 7.4.2](https://gradle.org/next-steps/?version=7.4.2&format=all)
+- [NDK 23.1.7779620](https://developer.android.com/ndk/downloads/older_releases)
 
 ## 📦 How to use
 
