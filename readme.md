@@ -1,7 +1,7 @@
 <h1 align="center">Expo Starter</h1>
 <p align="center">Expo starter project with most common packages and updated version</p>
 
-## 🚀 What is tested and working
+## 🔧 What is tested and working
 
 - Go App (in simulators)
 - Development builds (in simulators)
@@ -20,6 +20,15 @@
 
 - iOS
 - Android
+
+## 🚀 Features included
+
+- Expo Router v2
+- Manual change for Android gradle files so does not break on build
+- Example navigation templates
+- Prettier and ESLint + auto import sorting and `type` alias adding
+- Extra scripts in `package.json`
+- Other fixes
 
 ## 📦 How to use
 
