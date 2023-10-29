@@ -15,6 +15,7 @@
 - [Cocoapods](https://cocoapods.org/)
 - [Xcode](https://developer.apple.com/xcode/)
 - [Android Studio](https://developer.android.com/studio)
+- [Java 17](https://www.azul.com/downloads)
 
 ## 📱 What is supported
 
