@@ -9,6 +9,7 @@ export default (): ExpoConfig => {
   return {
     name: 'Expo Starter App',
     slug: 'expo-starter-app',
+    scheme: 'expo-starter-app',
     version: VERSION,
     orientation: 'portrait',
     icon: './assets/icon.png',
@@ -48,6 +49,7 @@ export default (): ExpoConfig => {
     },
 
     plugins: [
+      'expo-router',
       [
         'expo-build-properties',
         {
