@@ -5,7 +5,7 @@
 
 - Go App (in simulators)
 - Development builds (in simulators)
-- Development build (on iPhone 14 Pro)
+- Preview build (on iPhone 14 Pro)
 
 ## 📦 What is required
 
