@@ -1,9 +1,9 @@
 import { Text, View } from 'react-native';
 
-export default function Settings() {
+export default function AboutPage() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
+      <Text>About</Text>
     </View>
   );
 }
