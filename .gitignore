@@ -2,8 +2,8 @@
 
 .env
 
-ios/
-android/
+# ios/
+# android/
 
 # dependencies
 node_modules/

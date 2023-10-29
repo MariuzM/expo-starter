@@ -3,21 +3,19 @@
   "version": "1.0.0",
   "main": "src/App.tsx",
   "scripts": {
-    "dg": "expo start --ios",
     "d": "expo run:ios",
     "preb": "expo prebuild",
+    "========== FIX =================================": "",
     "check": "bunx expo-doctor",
     "fix:dep": "bunx expo install --fix",
-    "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install",
-    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install",
-    "b:prev": "bunx expo prebuild && bunx pod-install && bunx eas build -p ios --profile preview --local",
-    "pub": "bunx eas-cli update",
-    "==============================================": "",
-    "dev": "expo start --ios",
+    "========== CLEAN ===============================": "",
+    "cl:gradle": "cd android && ./gradlew clean && cd ..",
+    "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bunx expo prebuild && bunx pod-install",
+    "cl:full": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install",
+    "================================================": "",
     "start": "expo start",
     "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web"
+    "ios": "expo run:ios"
   },
   "overrides": {
     "react-native-safe-area-context": "4.6.3"
