@@ -4,7 +4,8 @@
   "main": "expo-router/entry",
   "scripts": {
     "d": "expo run:ios",
-    "start": "expo start",
+    "st": "expo start",
+    "st:cl": "expo start -c",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "========== PRE BUILD ===========================": "",
