@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 // Will be null for most users (only Mapbox authenticates this way).
 // Required on Android. See Android installation notes.
-// MapLibreGL.setAccessToken(null);
+MapLibreGL.setAccessToken(null);
 
 export default function MapPage() {
   return (
