@@ -58,6 +58,9 @@ target 'ExpoStarterApp' do
   )
 
   post_install do |installer|
+# @generated begin @maplibre/maplibre-react-native-post_installer - expo prebuild (DO NOT MODIFY) sync-88648fec2f0169e784fba60266091187f7753f15
+    $RNMBGL.post_install(installer)
+# @generated end @maplibre/maplibre-react-native-post_installer
     react_native_post_install(
       installer,
       config[:reactNativePath],

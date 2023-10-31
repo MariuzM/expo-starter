@@ -50,6 +50,7 @@ export default (): ExpoConfig => {
 
     plugins: [
       'expo-router',
+      '@maplibre/maplibre-react-native',
       [
         'expo-build-properties',
         {
