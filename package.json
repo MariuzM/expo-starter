@@ -4,21 +4,22 @@
   "main": "expo-router/entry",
   "scripts": {
     "d": "expo run:ios",
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "========== PRE BUILD ===========================": "",
     "preb": "expo prebuild",
+    "pod": "bunx pod-install",
     "========== PREVIEW BUILDS ======================": "",
     "b:prev": "bunx expo prebuild && bunx eas build --profile preview --local",
     "b:prev:ios": "bunx expo prebuild && bunx pod-install && bunx eas build --profile preview --local -p ios",
     "========== FIX =================================": "",
-    "check": "bunx expo-doctor",
-    "fix:deps": "bunx expo install --fix",
+    "doctor": "bunx expo-doctor",
+    "doctor:fix": "bunx expo install --fix",
     "========== CLEAN ===============================": "",
     "cl:gradle": "cd android && ./gradlew clean && cd ..",
     "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bunx expo prebuild && bunx pod-install",
-    "cl:full": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install",
-    "================================================": "",
-    "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios"
+    "cl:full": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install"
   },
   "overrides": {
     "react-native-safe-area-context": "4.6.3"
