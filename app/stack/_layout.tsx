@@ -5,6 +5,7 @@ export default function StackLayout() {
     <Stack>
       <Stack.Screen name="index" options={{ title: 'Page 1' }} />
       <Stack.Screen name="page2" options={{ title: 'Page 2' }} />
+      <Stack.Screen name="map" options={{ title: 'Map' }} />
     </Stack>
   );
 }
