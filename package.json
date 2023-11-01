@@ -22,7 +22,7 @@
     "========== CLEAN ===============================": "",
     "cl:gradle": "cd android && ./gradlew clean && cd ..",
     "cl": "rm -rf .expo/ node_modules/ bun.lockb && bun install && bunx expo prebuild && bunx pod-install",
-    "cl:full": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install"
+    "cl:f": "rm -rf .expo/ node_modules/ bun.lockb android/ ios/ && bun install && bunx expo prebuild && bunx pod-install"
   },
   "overrides": {
     "react-native-safe-area-context": "4.6.3"
