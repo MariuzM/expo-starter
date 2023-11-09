@@ -1,9 +1,5 @@
-import { Text, View } from 'react-native';
+import { Chat } from '../src/components/Chat';
 
 export default function HomePage() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home</Text>
-    </View>
-  );
+  return <Chat />;
 }
