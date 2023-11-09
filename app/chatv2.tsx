@@ -1,6 +1,27 @@
-import { KeyboardAvoidingView, Platform, ScrollView, TextInput, View } from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  TextInput,
+  View,
+} from 'react-native';
 
-export const Chat = () => {
+export default function ChatScreen() {
+  const scrollViewRef = useRef<ScrollView>(null);
+
+  useEffect(() => {
+    Keyboard.addListener('keyboardDidShow', () => {
+      if (Keyboard.isVisible() && scrollViewRef.current) {
+        scrollViewRef.current.scrollToEnd();
+      }
+    });
+    return () => {
+      Keyboard.removeAllListeners('keyboardDidShow');
+    };
+  }, []);
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -11,10 +32,9 @@ export const Chat = () => {
       }}
     >
       <ScrollView
-        automaticallyAdjustKeyboardInsets={true}
+        ref={scrollViewRef}
+        // automaticallyAdjustKeyboardInsets={true}
         // contentContainerStyle={{ flexGrow: 1 }}
-        // contentInset={{ bottom: -20 }}
-        // contentInsetAdjustmentBehavior="never"
         style={{ backgroundColor: 'orange' }}
       >
         <View style={{ height: 200, width: '100%', backgroundColor: 'red', marginBottom: 10 }} />
@@ -28,4 +48,4 @@ export const Chat = () => {
       <TextInput style={{ backgroundColor: 'green', margin: 12, height: 50 }} />
     </KeyboardAvoidingView>
   );
-};
+}
