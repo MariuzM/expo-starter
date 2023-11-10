@@ -1,10 +1,23 @@
 import { Tabs } from 'expo-router/tabs';
+import { KeyboardProvider } from 'react-native-keyboard-controller';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function AppLayout() {
   return (
-    <Tabs>
-      <Tabs.Screen name="index" options={{ title: 'Chat' }} />
-      <Tabs.Screen name="chatv2" options={{ title: 'ChatV2' }} />
-    </Tabs>
+    <KeyboardProvider>
+      <Tabs
+      // tabBar={() => {
+      //   return null;
+      // }}
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Chat',
+            // tabBarHideOnKeyboard: true,
+          }}
+        />
+      </Tabs>
+    </KeyboardProvider>
   );
 }
