@@ -1,15 +1,19 @@
-import { TextInput, View } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { FlatList, Platform, TextInput, View } from 'react-native';
 import { useReanimatedKeyboardAnimation } from 'react-native-keyboard-controller';
 import Animated, { useAnimatedStyle } from 'react-native-reanimated';
+import { initialWindowMetrics } from 'react-native-safe-area-context';
 
 export default function HomePage() {
   const { height } = useReanimatedKeyboardAnimation();
+  const tabBarHeight = useBottomTabBarHeight();
+
+  const bottomInset = (Platform.OS === 'android' && initialWindowMetrics?.insets.bottom) || 0;
+  console.log('🚀 ~ bottomInset:', bottomInset);
 
   const fakeView = useAnimatedStyle(() => {
     return {
-      backgroundColor: 'blue',
-      height: Math.abs(height.value),
+      height: Math.abs(height.value) - tabBarHeight + bottomInset,
     };
   }, []);
 
@@ -19,25 +23,12 @@ export default function HomePage() {
         inverted
         data={data}
         renderItem={() => {
-          return (
-            <View
-              style={{
-                backgroundColor: 'red',
-                height: 50,
-                margin: 12,
-              }}
-            />
-          );
+          return <View style={{ backgroundColor: 'red', height: 50, margin: 12 }} />;
         }}
       />
-      <TextInput
-        style={{
-          backgroundColor: 'green',
-          height: 50,
-          margin: 12,
-        }}
-      />
-      <Animated.View style={fakeView} />
+
+      <TextInput style={{ backgroundColor: 'green', height: 50, margin: 12 }} />
+      <Animated.View style={[fakeView, { backgroundColor: 'blue' }]} />
     </View>
   );
 }
