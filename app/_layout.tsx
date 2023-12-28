@@ -1,6 +1,16 @@
+import { useFonts } from 'expo-font';
 import { Tabs } from 'expo-router/tabs';
 
 export default function AppLayout() {
+  const [fontsLoaded] = useFonts({
+    Angelina: require('../assets/fonts/Angelina.otf'),
+    Angelina2: require('../assets/fonts/Angelina.otf'),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <Tabs>
       <Tabs.Screen name="index" options={{ title: 'Home' }} />

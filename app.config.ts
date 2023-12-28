@@ -63,6 +63,13 @@ export default (): ExpoConfig => {
           },
         },
       ],
+      // SDK 50
+      // [
+      //   'expo-font',
+      //   {
+      //     fonts: ['../assets/fonts/Angelina.otf'],
+      //   },
+      // ],
     ],
 
     extra: {
