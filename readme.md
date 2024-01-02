@@ -40,8 +40,14 @@ For Android:
 - [Gradle 7.4.2](https://gradle.org/next-steps/?version=7.4.2&format=all)
 - [NDK 23.1.7779620](https://developer.android.com/ndk/downloads/older_releases)
 
-## 📦 How to use
+## 🚀 Getting Started
 
 1. Clone this repository
 2. Run `bun install`
 3. Run `bun start`
+
+Feel free to contribute, report issues, or suggest improvements. Happy tracking!
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE.md).
