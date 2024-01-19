@@ -50,27 +50,24 @@ export default (): ExpoConfig => {
 
     plugins: [
       'expo-router',
-      [
-        'expo-build-properties',
-        {
-          ios: {
-            deploymentTarget: '15.0',
-          },
-          android: {
-            compileSdkVersion: 33,
-            targetSdkVersion: 33,
-            buildToolsVersion: '33.0.0',
-          },
-        },
-      ],
-      // SDK 50
       // [
-      //   'expo-font',
+      //   'expo-build-properties',
       //   {
-      //     fonts: ['../assets/fonts/Angelina.otf'],
+      //     ios: {
+      //       deploymentTarget: '15.0',
+      //     },
+      //     android: {
+      //       compileSdkVersion: 33,
+      //       targetSdkVersion: 33,
+      //       buildToolsVersion: '33.0.0',
+      //     },
       //   },
       // ],
     ],
+
+    experiments: {
+      typedRoutes: true,
+    },
 
     extra: {
       eas: {},

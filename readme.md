@@ -3,8 +3,9 @@
 
 ## 🚀 Features included
 
-- Expo Router v2
-- Example navigation templates
+- Expo v50 and Expo Router v3
+- Tailwind CSS integration
+<!-- - Example navigation templates -->
 - Prettier and ESLint + auto import sorting and `type` alias adding
 - Move from `app.json` to `app.config.ts` with typescript support
 - Extra scripts in `package.json`
