@@ -26,7 +26,7 @@ export const BottomSheetView = () => {
       >
         <View style={css.sheetContainer}>
           <Text>Awesome 🎉</Text>
-          <BottomSheetTextInput style={css.input} />
+          {/* <BottomSheetTextInput style={css.input} /> */}
         </View>
       </BottomSheet>
     </GestureHandlerRootView>
