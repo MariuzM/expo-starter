@@ -1,4 +1,4 @@
-import BottomSheet, { BottomSheetBackdrop } from '@gorhom/bottom-sheet';
+import BottomSheet, { BottomSheetBackdrop, BottomSheetTextInput } from '@gorhom/bottom-sheet';
 import { useCallback, useMemo, useRef } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -26,6 +26,7 @@ export const BottomSheetView = () => {
       >
         <View style={css.sheetContainer}>
           <Text>Awesome 🎉</Text>
+          <BottomSheetTextInput style={css.input} />
         </View>
       </BottomSheet>
     </GestureHandlerRootView>
@@ -41,5 +42,11 @@ const css = StyleSheet.create({
   sheetContainer: {
     alignItems: 'center',
     flex: 1,
+  },
+  input: {
+    backgroundColor: 'rgba(151, 151, 151, 0.25)',
+    borderRadius: 10,
+    padding: 12,
+    width: '80%',
   },
 });
