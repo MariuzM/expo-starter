@@ -1,10 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+
+import { BottomSheet } from '../components/BottomSheet';
 
 export default function Page() {
-  return (
-    <View className="flex-1 items-center justify-center">
-      <Text className="color-blue-500">Home</Text>
-    </View>
-  );
+  return <BottomSheet />;
 }

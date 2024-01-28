@@ -1,18 +1,12 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
-  },
   "extends": "expo/tsconfig.base",
-  "include": [
-    "global.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
 }
