@@ -1,18 +1,45 @@
-import { StyleSheet, Text, View } from 'react-native';
+import BottomSheet, { BottomSheetBackdrop } from '@gorhom/bottom-sheet';
+import { useCallback, useMemo, useRef } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-export const BottomSheet = () => {
+export const BottomSheetView = () => {
+  const ref = useRef<BottomSheet>(null);
+  const snapPoints = useMemo(() => ['25%', '50%'], []);
+
+  const handleSheetChanges = useCallback((index: number) => {
+    console.log('handleSheetChanges', index);
+  }, []);
+
   return (
-    <View style={css.container}>
-      <Text>BottomSheet</Text>
-    </View>
+    <GestureHandlerRootView style={css.container}>
+      <Button title="Open" onPress={() => ref.current?.snapToIndex(1)} />
+
+      <BottomSheet
+        ref={ref}
+        index={1}
+        snapPoints={snapPoints}
+        onChange={handleSheetChanges}
+        backdropComponent={(props) => {
+          return <BottomSheetBackdrop {...props} onPress={() => ref.current?.close()} />;
+        }}
+      >
+        <View style={css.sheetContainer}>
+          <Text>Awesome 🎉</Text>
+        </View>
+      </BottomSheet>
+    </GestureHandlerRootView>
   );
 };
 
 const css = StyleSheet.create({
   container: {
+    flex: 1,
     height: '100%',
+    justifyContent: 'center',
   },
-  content: {
-    padding: 20,
+  sheetContainer: {
+    alignItems: 'center',
+    flex: 1,
   },
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BottomSheet } from '../components/BottomSheet';
+import { BottomSheetView } from '../components/BottomSheet';
 
 export default function Page() {
-  return <BottomSheet />;
+  return <BottomSheetView />;
 }
