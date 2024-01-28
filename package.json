@@ -17,7 +17,7 @@
     "bprevi": "eas build --profile preview --local -p ios",
     "bpreva": "eas build --profile preview --local -p android",
     "========== PRODUCTION BUILDS ===================": "",
-    "bprodi": "eas build --profile production --local -p ios",
+    "bprodi": "bun run preb && eas build --profile production --local -p ios",
     "bprodi-s": "bun run bprodi && bun run scripts/run.ts",
     "========== FIX =================================": "",
     "doc": "bunx expo-doctor",
