@@ -32,8 +32,11 @@ export default (): ExpoConfig => {
       bundleIdentifier: BUNDLE_IDENTIFIER,
       runtimeVersion: VERSION,
       buildNumber: BUILD_NUMBER,
-      supportsTablet: true,
+      supportsTablet: false,
       infoPlist: {},
+      config: {
+        googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+      },
     },
 
     android: {
@@ -63,6 +66,7 @@ export default (): ExpoConfig => {
           },
         },
       ],
+      // '@maplibre/maplibre-react-native',
     ],
 
     experiments: {
@@ -70,7 +74,9 @@ export default (): ExpoConfig => {
     },
 
     extra: {
-      eas: {},
+      eas: {
+        projectId: '3ef33f6d-ada0-4486-89a1-b1057dd54552',
+      },
     },
   };
 };
