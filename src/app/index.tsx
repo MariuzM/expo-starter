@@ -5,7 +5,7 @@ export default function HomePage() {
   const router = useRouter();
 
   function onPress(item: string) {
-    router.push('../[user]');
+    router.push('/');
     router.setParams({ userId: item });
   }
 
