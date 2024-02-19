@@ -1,14 +1,15 @@
-import { Text, View } from 'react-native';
-
-import Test from './../componentsSecret/_index';
+import { Link } from 'expo-router';
+import { useEffect } from 'react';
 
 export default function HomePage() {
+  // useEffect(() => {
+  //   console.log('mounted');
+  //   return () => console.log('unmounted');
+  // }, []);
+
   return (
     <>
-      {/* <View style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
-        <Text>Index</Text>
-      </View> */}
-      <Test />
+      <Link href={'/page1'}>Page 1</Link>
     </>
   );
 }
