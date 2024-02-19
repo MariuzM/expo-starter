@@ -9,7 +9,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Link href={'/page1'}>Page 1</Link>
+      <Link href={'/page1'}>Go to Page 1</Link>
     </>
   );
 }

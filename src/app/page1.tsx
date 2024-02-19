@@ -10,7 +10,7 @@ export default function Page1() {
 
   return (
     <>
-      <Link href={'/page2'}>Page 2</Link>
+      <Link href={'/page2'}>Go to Page 2</Link>
     </>
   );
 }
