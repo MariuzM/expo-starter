@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "expo run:ios",
     "android": "expo run:android",
-    "ios": "expo run:ios"
+    "ios": "expo run:ios",
+    "start": "expo start"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4",
