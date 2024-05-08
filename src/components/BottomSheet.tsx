@@ -25,8 +25,7 @@ export const BottomSheetView = () => {
         }}
       >
         <BottomSheetScrollView style={css.sheetContainer}>
-          <Text>Awesome 🎉</Text>
-          {/* <BottomSheetTextInput style={css.input} /> */}
+          <Text>Awesome2 2🎉</Text>
         </BottomSheetScrollView>
       </BottomSheet>
     </GestureHandlerRootView>
@@ -40,7 +39,6 @@ const css = StyleSheet.create({
     justifyContent: 'center',
   },
   sheetContainer: {
-    alignItems: 'center',
     flex: 1,
   },
   input: {
