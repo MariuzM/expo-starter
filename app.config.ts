@@ -1,6 +1,6 @@
 import type { ExpoConfig } from 'expo/config';
 
-const BUNDLE_IDENTIFIER = '';
+const BUNDLE_IDENTIFIER = 'com.mariuzm.expostarterapp';
 const VERSION = '1.0.0';
 const BUILD_NUMBER = '1';
 const BACKGROUND_COLOR = '#fb00ff';
@@ -54,11 +54,11 @@ export default (): ExpoConfig => {
         'expo-build-properties',
         {
           ios: {
-            // newArchEnabled: true,
+            newArchEnabled: true,
             deploymentTarget: '15.0',
           },
           android: {
-            // newArchEnabled: true,
+            newArchEnabled: true,
             compileSdkVersion: 33,
             targetSdkVersion: 33,
             buildToolsVersion: '33.0.0',
