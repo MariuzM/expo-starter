@@ -1,16 +1,19 @@
-import { Link } from 'expo-router';
-import { useEffect } from 'react';
-import { Text } from 'react-native';
+import { Button, Text } from 'react-native';
+
+import { useState } from './_layout';
 
 export default function Page1() {
-  useEffect(() => {
-    console.log('mounted');
-    return () => console.log('unmounted');
-  }, []);
+  const isTrue = useState((s) => s.isTrue);
+
+  // useEffect(() => {
+  //   console.log('Page 1 mounted');
+  //   return () => console.log('Page 1 unmounted');
+  // }, []);
 
   return (
     <>
-      <Link href={'/page2'}>Go to Page 2</Link>
+      <Button title="Change state to true" onPress={() => useState.setState({ isTrue: !isTrue })} />
+      <Text>{isTrue.toString()}</Text>
     </>
   );
 }

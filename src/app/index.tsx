@@ -1,12 +1,15 @@
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
+import { Button, Text } from 'react-native';
 
-import { BottomSheetView } from '../components/BottomSheet';
+import { useState } from './_layout';
 
 export default function HomePage() {
+  const isTrue = useState((s) => s.isTrue);
+
   return (
     <>
-      {/* <Link href={'/page1'}>Go to Page 1</Link> */}
-      <BottomSheetView />
+      <Button title="Go to Page 1" onPress={() => router.push('/page1')} />
+      <Text>{isTrue.toString()}</Text>
     </>
   );
 }
