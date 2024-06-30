@@ -5,7 +5,7 @@ export default function UsersLayout() {
   return (
     <Stack
       screenOptions={{
-        header(p) {
+        header(p: any) {
           return (
             <View style={{ backgroundColor: 'lightblue', height: 100, justifyContent: 'flex-end' }}>
               <Text>TITLE: {p.route.params?.userId}</Text>

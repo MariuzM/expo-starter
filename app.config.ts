@@ -49,14 +49,14 @@ export default (): ExpoConfig => {
         'expo-build-properties',
         {
           ios: {
-            newArchEnabled: true,
+            // newArchEnabled: true,
             deploymentTarget: '15.0',
           },
           android: {
-            newArchEnabled: true,
-            compileSdkVersion: 33,
-            targetSdkVersion: 33,
-            buildToolsVersion: '33.0.0',
+            // newArchEnabled: true,
+            compileSdkVersion: 34,
+            targetSdkVersion: 34,
+            buildToolsVersion: '34.0.0',
           },
         },
       ],

@@ -13,6 +13,21 @@
     "import/ignore": ["react-native"]
   },
 
+  "ignorePatterns": [
+    "**/android/",
+    "**/build/",
+    "**/cache/",
+    "**/coverage/",
+    "**/dist/",
+    "**/git/",
+    "**/ios/",
+    "**/node_modules/",
+    ".expo",
+    ".next",
+    "jest.config.js",
+    "webpack.config.js"
+  ],
+
   "rules": {
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-unused-vars": "off",
