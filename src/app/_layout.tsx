@@ -13,7 +13,7 @@ export default function RootLayout() {
   return (
     <Stack
       screenOptions={{
-        animation: 'ios',
+        // animation: 'ios',
         headerStyle: {
           backgroundColor: 'blue',
         },
