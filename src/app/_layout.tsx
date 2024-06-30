@@ -1,4 +1,4 @@
-import { Stack } from 'expo-router';
+import { Tabs } from 'expo-router';
 import { useEffect } from 'react';
 
 export default function RootLayout() {
@@ -11,20 +11,10 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <Stack
-      screenOptions={{
-        animation: 'ios',
-        headerStyle: {
-          backgroundColor: 'blue',
-        },
-        contentStyle: {
-          backgroundColor: 'orange',
-        },
-        headerTintColor: 'white',
-      }}
-    >
-      <Stack.Screen name="index" />
-      <Stack.Screen name="page1" />
-    </Stack>
+    <Tabs>
+      <Tabs.Screen name="index" options={{ title: 'Home' }} />
+      <Tabs.Screen name="page1" options={{ title: 'Page 1' }} />
+      <Tabs.Screen name="settings" options={{ headerShown: false }} />
+    </Tabs>
   );
 }
