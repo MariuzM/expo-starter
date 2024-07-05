@@ -1,8 +1,8 @@
-import { useLocalSearchParams } from 'expo-router';
-import { Text, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router'
+import { Text, View } from 'react-native'
 
 export default function UserPage() {
-  const slug = useLocalSearchParams();
+  const slug = useLocalSearchParams()
 
   return (
     <View
@@ -14,5 +14,5 @@ export default function UserPage() {
     >
       <Text>{slug.userId}</Text>
     </View>
-  );
+  )
 }

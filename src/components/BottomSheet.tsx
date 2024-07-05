@@ -1,15 +1,15 @@
-import BottomSheet, { BottomSheetBackdrop, BottomSheetScrollView } from '@gorhom/bottom-sheet';
-import { useCallback, useMemo, useRef } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import BottomSheet, { BottomSheetBackdrop, BottomSheetScrollView } from '@gorhom/bottom-sheet'
+import { useCallback, useMemo, useRef } from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export const BottomSheetView = () => {
-  const ref = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const ref = useRef<BottomSheet>(null)
+  const snapPoints = useMemo(() => ['25%', '50%'], [])
 
   const handleSheetChanges = useCallback((index: number) => {
-    console.log('handleSheetChanges', index);
-  }, []);
+    console.log('handleSheetChanges', index)
+  }, [])
 
   return (
     <GestureHandlerRootView style={css.container}>
@@ -21,7 +21,7 @@ export const BottomSheetView = () => {
         snapPoints={snapPoints}
         onChange={handleSheetChanges}
         backdropComponent={(props) => {
-          return <BottomSheetBackdrop {...props} onPress={() => ref.current?.close()} />;
+          return <BottomSheetBackdrop {...props} onPress={() => ref.current?.close()} />
         }}
       >
         <BottomSheetScrollView style={css.sheetContainer}>
@@ -29,8 +29,8 @@ export const BottomSheetView = () => {
         </BottomSheetScrollView>
       </BottomSheet>
     </GestureHandlerRootView>
-  );
-};
+  )
+}
 
 const css = StyleSheet.create({
   container: {
@@ -47,4 +47,4 @@ const css = StyleSheet.create({
     padding: 12,
     width: '80%',
   },
-});
+})

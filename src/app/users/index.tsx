@@ -1,12 +1,12 @@
-import { useRouter } from 'expo-router';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { useRouter } from 'expo-router'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 export default function HomePage() {
-  const router = useRouter();
+  const router = useRouter()
 
   function onPress(item: string) {
-    router.push('/users/');
-    router.setParams({ userId: item });
+    router.push('/users/')
+    router.setParams({ userId: item })
   }
 
   return (
@@ -25,5 +25,5 @@ export default function HomePage() {
         <Text>User 2</Text>
       </TouchableOpacity>
     </View>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import { Stack } from 'expo-router';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Stack } from 'expo-router'
+import { Text, TouchableOpacity, View } from 'react-native'
 
 export default function UsersLayout() {
   return (
@@ -14,12 +14,12 @@ export default function UsersLayout() {
                 <Text style={{ fontSize: 30 }}> Back to {p.back?.title}</Text>
               </TouchableOpacity>
             </View>
-          );
+          )
         },
       }}
     >
       <Stack.Screen name="index" />
       <Stack.Screen name="[user]" />
     </Stack>
-  );
+  )
 }
