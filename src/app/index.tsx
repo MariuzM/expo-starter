@@ -15,7 +15,7 @@ export default function HomePage() {
 
 					// === Works on iOS only but on Android i lose font family but still have bold
 					fontFamily: 'Figtree',
-					fontWeight: 'bold',
+					// fontWeight: 'bold',
 				}}
 			>
 				This is my Font @
