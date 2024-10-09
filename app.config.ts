@@ -62,6 +62,16 @@ export default (): ExpoConfig => {
 					},
 				},
 			],
+			[
+				'expo-font',
+				{
+					fonts: [
+						//
+						'./assets/fonts/Figtree.ttf',
+						'./assets/fonts/FigtreeBold.ttf',
+					],
+				},
+			],
 		],
 
 		experiments: {

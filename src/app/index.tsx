@@ -1,13 +1,25 @@
-import { router } from 'expo-router'
-import { Button, View } from 'react-native'
+import { Text, View } from 'react-native'
 
 export default function HomePage() {
 	return (
-		<View style={{ flex: 1, backgroundColor: 'red' }}>
-			<View style={{ marginTop: 100 }}>
-				<Button title="Go to Page 1" onPress={() => router.push('/page1')} />
-				<Button title="Go to Page 2" onPress={() => router.push('/page2')} />
-			</View>
+		<View style={{ alignItems: 'center', flex: 1, justifyContent: 'center' }}>
+			<Text
+				style={{
+					fontSize: 40,
+
+					// === Works on both Android and iOS
+					// fontFamily: 'Figtree',
+
+					// === Works on Android only
+					// fontFamily: 'FigtreeBold',
+
+					// === Works on iOS only but on Android i lose font family but still have bold
+					fontFamily: 'Figtree',
+					fontWeight: 'bold',
+				}}
+			>
+				This is my Font @
+			</Text>
 		</View>
 	)
 }
